@@ -980,8 +980,25 @@ if(!$USER->IsAdmin())
             }
         })
     }
-
+    function saveLinkSection(){
+        $.ajax({
+            method: "POST",
+            url: module_path + "ajaxSaveCategories.php",
+            dataType: 'json',
+            // context: context,
+            data:{options:options_data_for_scritp},
+            success: function(data){
+                //data['obj'];
+                //startScript();
+            },
+            error: function(response){
+                // $("#result #error").show();
+                // setTimeout('$("#result #error").hide()', 5000);
+            }
+        })
+    }
     function getOptions(){
+        saveLinkSection();
         // TODO организовать проверку данных перед отдачей ?
         return options_data_for_scritp;
     }

@@ -1,6 +1,6 @@
 <?php
 
-//header("Content-type: application/json; charset=utf-8");
+header("Content-type: application/json; charset=utf-8");
 include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
 use Bitrix\Catalog\CatalogIblockTable;
 CModule::IncludeModule("iblock");
