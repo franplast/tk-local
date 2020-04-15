@@ -341,8 +341,9 @@ if(!$USER->IsAdmin())
         next_step.find('.content-block').show();
     });
 
-    // $('#get-sections').on('click', '.button.save', function () {
-    // });
+     /*$('#get-sections').on('click', '.button.save', function () {
+         console.log(options_data_for_scritp)
+     });*/
 
     $('#get-props').on('click', '.button.next', function () {
         let current_step = $(this).closest('.step');
@@ -416,7 +417,7 @@ if(!$USER->IsAdmin())
         $(this).remove();
         container_select.append('<select></select><div class="button js_apply">v</div><div class="button button-red js_breack">x</div>');
         showSectionsFromIblock(container_select.find('select'), iblock_id, section_id);
-
+        return false;
     });
 
     $('#sections').on( 'click', '.js_apply', function(){
@@ -981,6 +982,7 @@ if(!$USER->IsAdmin())
         })
     }
     function saveLinkSection(){
+        console.log(options_data_for_scritp);
         $.ajax({
             method: "POST",
             url: module_path + "ajaxSaveCategories.php",

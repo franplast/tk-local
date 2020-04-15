@@ -14,7 +14,8 @@ $arResult['STATUS'] = 1;
 $categoryId = 2;
 $iblock_id_ar = array();
 $section_id_ar = array();
-$hlblock = HL\HighloadBlockTable::getById(4)->fetch();
+$HlBlockIdCategories = 4;//hb категория id
+$hlblock = HL\HighloadBlockTable::getById($HlBlockIdCategories)->fetch();
 $entity = HL\HighloadBlockTable::compileEntity($hlblock);
 $entityDataClass = $entity->getDataClass();
 $rsData = $entityDataClass::getList(["select" => ["ID","UF_IBLOCK_ID","UF_SECTION_ID","UF_CATEGORY_NAME","UF_CATEGORY_ID"], "filter" => ["ID" => $categoryId]]);
