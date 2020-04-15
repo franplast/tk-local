@@ -14,7 +14,6 @@ $arResult['ITEM'] = '';
 
 if( !$name)
 {
-    $arResult['STATUS'] = 0;
     $arResult['MESSAGE'] = "Имя св-ва обязательно";
 }
 else {
